@@ -17,13 +17,16 @@ int countVowel(string str) {
 	return countVowel;
 }
 
-int main() {
+int main(void) {
 
 	string str;
-	cout << "Enter a word or number: ";
-	getline(cin, str);
+	while (true) {
+		cout << "Enter a string or Q to quit: ";
+		getline(cin, str);
 
-	cout << "Number of vowels: " << countVowel(str) << endl;
+		if (str == "Q" || str == "q") break;
+		cout << "Vowel count: " << countVowel(str) << endl;
 
+	}
 	return 0;	
 }
